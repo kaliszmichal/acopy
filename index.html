@@ -1,10 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=device-width, initial-scale=1.0">
+    <title>Projekt: Program do kopiowania plików (C)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #c9d1d9;
+            background-color: #0d1117;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+        }
+        h1, h2 {
+            color: #58a6ff;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 8px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 24px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #f0883e;
+        }
+        code {
+            background-color: rgba(110, 118, 129, 0.4);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, SF Pro Text, Menlo, Monaco, Consolas, monospace;
+            font-size: 85%;
+            color: #ff7b72;
+        }
+        pre {
+            background-color: #0d1117;
+            padding: 16px;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+            overflow-x: auto;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            color: #79c0ff;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.85em;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
+
+<div class="container">
+    <h1>Projekt: Program do kopiowania plików (C)</h1>
+    <p>Prosty i wydajny program konsolowy napisany w języku C, służący do bezpiecznego kopiowania plików. Projekt został podzielony w sposób strukturalny na pliki źródłowe (<code>.c</code>) oraz nagłówkowe (<code>.h</code>), co ułatwia zarządzanie kodem i ewentualną rozbudowę.</p>
+
+    <h2>🚀 Funkcje programu</h2>
+    <ul>
+        <li><strong>Uniwersalność:</strong> Dzięki zastosowaniu trybu binarnego (<code>rb</code>/<code>wb</code>), program bez problemu kopiuje każdy rodzaj plików: tekstowe, obrazy, pliki PDF, archiwa czy pliki wykonywalne.</li>
+        <li><strong>Wydajność pamięciowa:</strong> Kopiowanie odbywa się blokowo za pomocą bufora o rozmiarze 4 KB. Oznacza to, że program nie ładuje całego pliku do pamięci RAM, co pozwala na bezpieczne kopiowanie nawet bardzo dużych plików bez ryzyka zawieszenia komputera.</li>
+        <li><strong>Obsługa błędów:</strong> Program informuje użytkownika, jeśli plik źródłowy nie istnieje lub brakuje uprawnień do zapisu pliku docelowego.</li>
+    </ul>
+
+    <h2>📁 Struktura projektu</h2>
+    <ul>
+        <li><code>main.c</code> – Główny punkt wejścia programu. Odpowiada za komunikację z użytkownikiem (pobranie ścieżek do plików) oraz wyświetlanie statusu operacji.</li>
+        <li><code>copier.c</code> – Logika biznesowa programu. Zawiera implementację właściwej funkcji kopiującej dane strumieniem binarnym.</li>
+        <li><code>copier.h</code> – Plik nagłówkowy zawierający deklarację funkcji <code>copy_file</code> oraz opis kodów błędów.</li>
+    </ul>
+
+    <h2>🛠️ Kompilacja i uruchomienie</h2>
+    <p>Do skompilowania projektu wymagany jest kompilator języka C (np. <code>gcc</code> lub <code>clang</code>).</p>
+
+    <h3>1. Kompilacja za pomocą GCC</h3>
+    <p>Otwórz terminal w folderze z projektem i wykonaj następujące polecenie:</p>
+    <pre><code>gcc main.c copier.c -o program_kopiujacy</code></pre>
+
+    <div class="footer">
+        Strona projektu na GitHub
+    </div>
+</div>
 
 </body>
 </html>
